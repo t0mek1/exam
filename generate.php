@@ -8,58 +8,42 @@ $faker = Faker\Factory::create();
 
 
 
-echo $faker->name;
 
 
 
-// $servername = "localhost";
 
-// $username = "root";
+ $servername = "localhost";
 
-// $password = "";
+ $username = "root";
 
-// $dbname = "exam";
+ $password = "";
 
- 
-
-// $conn = mysqli_connect($servername, $username, $password, $dbname);
+ $dbname = "bet";
 
  
 
-// if (!$conn) {
-
-//   die("Connection failed: " . mysqli_connect_error());
-
-// }
-
-
-
-// $name = $faker->name();
-
-// echo $name;
-
-
-
-
-
-
-// $sql = "INSERT INTO images (name,picsum_id,imagefile,author,width,height,added_at) VALUES ('$model', '$marka', '$rok_produkcji', '$cena')";
-
-
+ $conn = mysqli_connect($servername, $username, $password, $dbname);
 
  
 
+ if (!$conn) {
+
+   die("Connection failed: " . mysqli_connect_error());
+
+ }
 
 
-// if (mysqli_query($conn, $sql)) {
 
-//   echo "New record created successfully";
+ $name = $faker->name();
 
-// } else {
 
-//   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 
-// }
+
+
+
+
+
+$sql = "INSERT INTO qwe (`name`, `picsum_id`, `imagefile`, `author`, `width`, `height`, `added_at`) VALUES ('value-1','value-2','value-3','value-4','value-5','value-6','value-7')";
 
 
 
@@ -67,7 +51,23 @@ echo $faker->name;
 
 
 
-// mysqli_close($conn);
+ if (mysqli_query($conn, $sql)) {
+
+   echo "New record created successfully";
+
+ } else {
+
+   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+
+ }
+
+
+
+ 
+
+
+
+ mysqli_close($conn);
 
 
 
